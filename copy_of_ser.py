@@ -135,4 +135,5 @@ op = text_model.predict(dataframe)
 if st.button('PREDICT'):
    st.title("Entered Emotion:",op)
 
+#Running Streamlit 
 !streamlit run app.py &npx localtunnel --port 8501
