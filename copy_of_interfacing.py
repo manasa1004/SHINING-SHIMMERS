@@ -70,10 +70,10 @@ pip install streamlit
    t.append(feature)
    return t
  
- x_train = np.load("drive/MyDrive/x_train.npy")
- x_test = np.load("drive/MyDrive/x_test.npy")
- y_train = np.load("drive/MyDrive/y_train.npy")
- y_test = np.load("drive/MyDrive/y_test.npy")
+ x_train = np.load("/content/x_train.npy")
+ x_test = np.load("/content/x_test.npy")
+ y_train = np.load("/content/y_train.npy")
+ y_test = np.load("/content/y_test.npy")
  
  if file_upload:
    x = load_data(file_upload.name)
@@ -95,5 +95,5 @@ from pyngrok import ngrok
 url = ngrok.connect(port = 8501)
 print(url)
 
-!streamlit run --server.port 80 app.py >/dev/null
+!streamlit run app.py &npx localtunnel --port 8501
 
