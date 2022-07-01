@@ -2,7 +2,10 @@ import joblib
 import streamlit as st
 import os
 from utils import *
+from PIL import Image
 
+image = Image.open('SER_Image.jpeg')
+st.image(image)
 st.title("Speech Emotion Recognition Using ML")
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
